@@ -2,10 +2,8 @@
 cd ~ | pwd
 
 # Task 2
-ls /proc/ | grep mem
-cat /proc/meminfo
-ls /proc/ | grep cpu
-cat /proc/cpuinfo
+ls /proc/ | grep mem # For memory information
+ls /proc/ | grep cpu # For cpu information
 
 # Task 3
 ls /etc/ | grep os

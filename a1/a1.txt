@@ -8,14 +8,29 @@ cpuinfo # File for cpu information
 # Task 3
 Ubuntu 20.04.6 LTS (Focal Fossa)
 os-release under /etc/ contains this information
+NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
 
 # Task 4A
+ #Count ID
   13279 161.0
   12380 237.0
   11102 236.0
+161, 237, and 236 are most popular pickup locations on 04-02-2019
 
 # Task 4B
+ #Count ID
   13200 161.0
   12905 237.0
   11242 236.0
-
+161, 237, and 236 are most popular pickup locations on 04-10-2019
