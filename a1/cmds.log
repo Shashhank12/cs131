@@ -1,0 +1,19 @@
+# Task 1
+cd ~ | pwd
+
+# Task 2
+ls /proc/ | grep mem
+cat /proc/meminfo
+ls /proc/ | grep cpu
+cat /proc/cpuinfo
+
+# Task 3
+ls /etc/ | grep os
+cat /etc/os-release
+
+# Task 4
+# Part A
+cat 2019-04.csv | grep '^[^"]*"2019-04-02' | cut -d , -f 8 | sort | uniq -c | sort -r | head -3
+
+# Part B
+cat 2019-04.csv | grep '^[^"]*"2019-04-10' | cut -d , -f 8 | sort | uniq -c | sort -r | head -3

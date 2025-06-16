@@ -1,0 +1,21 @@
+# Task 1 - Home directory
+/home/shashhank_seethula
+
+# Task 2
+meminfo # File for memory information
+cpuinfo # File for cpu information
+
+# Task 3
+Ubuntu 20.04.6 LTS (Focal Fossa)
+os-release under /etc/ contains this information
+
+# Task 4A
+  13279 161.0
+  12380 237.0
+  11102 236.0
+
+# Task 4B
+  13200 161.0
+  12905 237.0
+  11242 236.0
+
