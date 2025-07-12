@@ -1,10 +1,11 @@
+# BEGIN block initially ran
 BEGIN {
 	# Setting variables
 	FS = ","
 	highest_name = ""
-	highest_score = -99999
+	highest_score = -99999 # Mimicking the functionality of setting to -infinity
 	lowest_name = ""
-	lowest_score = 99999
+	lowest_score = 99999 # Mimicking the functionality of setting to infinity
 }
 
 # Used to skip the first (header) line
@@ -17,7 +18,7 @@ NR==1 {
 	# Uses array to store name, total, average, and status by using current line number (NR)
 	name[NR] = $2
 	total[NR] = 0
-	# Calculates the total by summing the scores for each class
+	# Calculates the total by summing the scores for each class by iterating through each column that is a score (column number is > 2)
 	for (i = 3; i <= NF; ++i) {
 		total[NR] += $i	
 	}
@@ -27,19 +28,23 @@ NR==1 {
 	updateMinMax(name[NR], total[NR])
 }
 
+# END block ran after processing every line
 END {
+	# Formatting the Output
 	print "          Student Scores Summary          "
 	print "------------------------------------------"
+	# Iterate through every line with a student and print the name, score, average, and status
 	for (i = 2; i <= NR; ++i) {
-		print "Student Name: ", name[i]
-		print "Total Score: ", total[i]
-		print "Average Score: ", average[i]
-		print "Status: ", status[i]
+		print "Student Name:  " name[i]
+		print "Total Score:   " total[i]
+		print "Average Score: " average[i]
+		print "Status:        " status[i]
 		print ""	
 	}
 
-	print "Highest Scoring Student: ", highest_name, "(", highest_score, ")"
-	print "Lowest Scoring Student: ", lowest_name, "(", lowest_score, ")"
+	# Printing highest and lowest scoring students
+	print "Highest Scoring Student: " highest_name "(" highest_score ")"
+	print "Lowest Scoring Student: " lowest_name "(" lowest_score ")"
 
 }
 
@@ -48,7 +53,7 @@ function getAverage(total, count) {
 	return total / count	
 }
 
-# Returns pass or fail depending on average score
+# Returns pass or fail depending on average score.
 function getStatus(average) {
 	if (average >= 70) {
 		return "Pass"
