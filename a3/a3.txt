@@ -1,0 +1,41 @@
+# Output of cat grades.csv. Used to view the contents of grades.csv
+StudentID,Name,CS146,CS131,CS100W
+101,Alice,85,90,78
+102,Bob,76,82,88
+103,Charlie,90,85,95
+104,David,65,70,60
+105,Eve,88,92,85
+
+# The output below comes from running the following command: awk -f grader.awk grades.csv
+# This is a summary of scores in grades.csv.
+# It gives the student name, total score, average, and their pass/fail status.
+# It also gives the highest and lowest scoring students.
+          Student Scores Summary          
+------------------------------------------
+Student Name:  Alice
+Total Score:  253
+Average Score:  84.3333
+Status:  Pass
+
+Student Name:  Bob
+Total Score:  246
+Average Score:  82
+Status:  Pass
+
+Student Name:  Charlie
+Total Score:  270
+Average Score:  90
+Status:  Pass
+
+Student Name:  David
+Total Score:  195
+Average Score:  65
+Status:  Fail
+
+Student Name:  Eve
+Total Score:  265
+Average Score:  88.3333
+Status:  Pass
+
+Highest Scoring Student:  Charlie ( 270 )
+Lowest Scoring Student:  David ( 195 )

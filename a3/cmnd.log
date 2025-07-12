@@ -1,0 +1,15 @@
+# Moving into a3 directory
+mkdir a3
+cd a3
+
+# Creating and editing the necessary files in a3 directory
+touch cmnd.log
+touch a3.txt
+vim grades.csv # Copy pasted the sample data
+vim grader.awk # AWK Script to run
+
+# Used to display grades.csv
+cat grades.csv >> a3.txt
+
+# Command used to run the grader.awk script on grades.csv. Also redirecting output to a3.txt
+awk -f grader.awk grades.csv >> a3.txt
